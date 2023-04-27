@@ -11,7 +11,7 @@ git pull
 #./scripts/flash-sdcard.sh /dev/ttyACM0 btt-octopus-f446-v1.1
 #read -p "Octopus firmware flashed, please check above for any errors. Press [Enter] to continue, or [Ctrl+C] to abort"
 
-##Update via CanBoot
+##Octopus Update via CanBoot
 python3 ~/CanBoot/scripts/flash_can.py -i can0 -u de6599069f13 -r
 
 make clean KCONFIG_CONFIG=config.octopus
@@ -25,6 +25,17 @@ python3 ~/CanBoot/scripts/flash_can.py -f ~/firmware/octopus_1.1_klipper.bin -d 
 
 read -p "Octopus firmware flashed, please check above for any errors. Press [Enter] to continue, or [Ctrl+C] to abort"
 
+##Update Toolhead board via CanBoot
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -u 5f80237f85ce -r
+
+make clean KCONFIG_CONFIG=config.sb2240
+#make menuconfig KCONFIG_CONFIG=config.sb2240
+make KCONFIG_CONFIG=config.sb2240
+mv ~/klipper/out/klipper.bin ~/firmware/SB2240_klipper.bin
+
+read -p "Toolhead SB2240 firmware built, please check above for any errors. Press [Enter] to continue flashing, or [Ctrl+C] to abort"
+
+python3 ~/CanBoot/scripts/flash_can.py -i can0 -u 5f80237f85ce -f ~/firmware/SB2240_klipper.bin
 
 #make clean KCONFIG_CONFIG=config.rpi
 #make menuconfig KCONFIG_CONFIG=config.rpi
