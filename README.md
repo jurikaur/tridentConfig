@@ -7,7 +7,7 @@ https://docs.vorondesign.com/community/howto/EricZimmerman/BackupConfigToGithub.
 Credit
 @hartk1213
 @EricZimmerman
-
+adapted from the excellent work from https://github.com/Frix-x/klipper-voron-V2
 
 Hardware notes:
 Voron Trident 300x300
