@@ -5,15 +5,15 @@ Printer config backup is from
 https://docs.vorondesign.com/community/howto/EricZimmerman/BackupConfigToGithub.html
 
 Credit
-@hartk1213
-@EricZimmerman
+@hartk1213; 
+@EricZimmerman; 
 adapted from the excellent work from https://github.com/Frix-x/klipper-voron-V2
 
-Hardware notes:
-Voron Trident 300x300
-SB toolhead with Optotap 5v
-Btt octopus
-Controller fans 24v running on 12v
+Hardware notes: 
+Voron Trident 300x300; 
+SB toolhead with Optotap 5v; 
+Btt octopus; 
+Controller fans 24v running on 12v;
 
 Mods:
 Nevermore Duo (12v fans)
