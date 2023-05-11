@@ -40,47 +40,10 @@ type = git_repo
 path = ~/klippain_config
 channel = beta
 origin = https://github.com/jurikaur/klippain.git
-primary_branch = my-dev
+primary_branch = main
 managed_services = moonraker klipper
 install_script = install.sh
 
 [file_manager]
 enable_object_processing = True
-
-[update_manager client mainsail]
-type = web
-repo = mainsail-crew/mainsail
-path = ~/mainsail
-
-[announcements]
-subscriptions = 
-	mainsail
-
-[update_manager mainsail-config]
-type = git_repo
-primary_branch = master
-path = ~/mainsail-config
-origin = https://github.com/mainsail-crew/mainsail-config.git
-managed_services = klipper
-
-[update_manager CanBoot]
-type = git_repo
-path = ~/CanBoot
-origin = https://github.com/Arksine/CanBoot.git
-is_system_service = False
-
-[update_manager crowsnest]
-type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-managed_services = crowsnest
-install_script = tools/install.sh
-
-[update_manager sonar]
-type = git_repo
-path = ~/sonar
-origin = https://github.com/mainsail-crew/sonar.git
-primary_branch = main
-managed_services = sonar
-install_script = tools/install.sh
 
